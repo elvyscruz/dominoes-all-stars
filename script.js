@@ -81,8 +81,9 @@ class DominoGame {
     }
 
     renderTile(tile, isHidden = false, isSmall = false) {
+        const isDouble = tile.left === tile.right;
         const tileEl = document.createElement('div');
-        tileEl.className = `domino-tile horizontal ${isHidden ? 'machine-tile' : ''} ${isSmall ? 'small' : ''}`;
+        tileEl.className = `domino-tile ${isDouble ? 'vertical' : 'horizontal'} ${isHidden ? 'machine-tile' : ''} ${isSmall ? 'small' : ''}`;
         tileEl.dataset.id = tile.id;
 
         if (isHidden) {
