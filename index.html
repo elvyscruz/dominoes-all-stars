@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Dominó</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Juego de Dominó</h1>
+            <div class="score-board">
+                <div class="player-score">
+                    <span>Jugador: <span id="player-points">0</span></span>
+                </div>
+                <div class="machine-score">
+                    <span>Máquina: <span id="machine-points">0</span></span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="game-info">
+                <div id="turn-indicator">Turno del Jugador</div>
+                <div id="game-message"></div>
+                <button id="new-game-btn">Nuevo Juego</button>
+                <button id="draw-tile-btn" disabled>Robar Ficha</button>
+            </section>
+
+            <section class="machine-area">
+                <h2>Máquina (<span id="machine-tiles-count">0</span> fichas)</h2>
+                <div id="machine-hand" class="hand"></div>
+            </section>
+
+            <section class="board-area">
+                <h2>Mesa de Juego</h2>
+                <div id="game-board" class="board">
+                    <div id="board-left" class="board-end" data-position="left"></div>
+                    <div id="board-right" class="board-end" data-position="right"></div>
+                </div>
+            </section>
+
+            <section class="player-area">
+                <h2>Tus Fichas</h2>
+                <div id="player-hand" class="hand"></div>
+            </section>
+
+            <section class="boneyard">
+                <h2>Montón (<span id="boneyard-count">0</span> fichas)</h2>
+                <div id="boneyard" class="tiles-pile"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
